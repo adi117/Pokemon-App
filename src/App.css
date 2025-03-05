@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar{
+    display: none;
+  }
+}
 
 #root {
   max-width: 1280px;

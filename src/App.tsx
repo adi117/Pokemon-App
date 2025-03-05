@@ -10,7 +10,7 @@ function App() {
   // const detail = usePokemonDetails("bulbasaur");
 
   return (
-    <div className='w-80 bg-slate-900 h-[568px] overflow-y-scroll no-scrollbar mb-6'>
+    <div className='w-80 bg-[#252A3E] h-[568px] overflow-y-scroll no-scrollbar'>
       {/* Start the development here */}
       {/* Use react-router-dom Expected routes:  */}
       {/* 1. Home path: "/" */}

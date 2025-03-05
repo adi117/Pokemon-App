@@ -9,7 +9,6 @@ interface PokemonDetails {
   defense: number;
   spriteFront: string;
   artworkFront: string;
-  types: string;
 }
 
 const usePokemonDetails = (pokemonName: string) => {
@@ -31,9 +30,8 @@ const usePokemonDetails = (pokemonName: string) => {
         const health = data.stats.find((stat: any) => stat.stat.name === 'hp').base_stat;
         const attack = data.stats.find((stat: any) => stat.stat.name === 'attack').base_stat;
         const defense = data.stats.find((stat: any) => stat.stat.name === 'defense').base_stat;
-        const types = data.types.map((type: any) => type.type.name).join(', ');
 
-        setPokemonDetails({ name, id, health, attack, defense, spriteFront, artworkFront, types});
+        setPokemonDetails({ name, id, health, attack, defense, spriteFront, artworkFront });
         setLoading(false);
       } catch (error) {
         setError(error);

@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import pokemonLogo from "../../assets/pokemon-logo.png";
+import SearchField from "./SearchField";
+
+interface HeaderProps {
+  withSearch?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ withSearch }) => {
+  return (
+    <header className="py-2 p-6 flex justify-between items-center border-b-[1px] border-chronicle">
+      <img
+        src={pokemonLogo}
+        alt="pokemon logo"
+        className="h-full w-auto object-contain"
+      />
+      {withSearch ? <SearchField /> : null}
+    </header>
+  );
+};
+
+export default Header;
+=======
 import { FC, useState } from "react";
 import Logo from "../../assets/logo.webp"
 import SearchIcon from "@/assets/magnifier.svg"
@@ -29,3 +52,4 @@ const Header : FC = () => {
 }
 
 export default Header;
+>>>>>>> feat/start-point

@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
-
-interface Pokemon {
-  name: string;
-  url: string;
-}
+import { useContext } from "react";
+import PokemonContext from "../context/PokemonContext";
 
 const usePokemonList = () => {
+<<<<<<< HEAD
+  const context = useContext(PokemonContext);
+  if (context === undefined) {
+    throw new Error('usePokemonList must be used within a PokemonProvider');
+  }
+  return context;
+=======
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<unknown>(null);
@@ -31,6 +34,7 @@ const usePokemonList = () => {
   }, []);
 
   return { pokemonList, loading, error };
+>>>>>>> feat/start-point
 };
 
 export default usePokemonList;
